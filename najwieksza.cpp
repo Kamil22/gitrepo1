@@ -39,9 +39,9 @@ int main(int argc, char **argv)
         else cout << "Największe jest c!";
     }
          
-    } 
-    else
     {
+    else
+}
         ; // a nie jest większe od b
     }
  
