@@ -1,6 +1,6 @@
 /*
  * sumuj.cpp
- * Program pobiera i sumuje 10 liczb, wynik  dukuje na ekranie 
+ * Program pobiera i sumuje 10 liczb, wynik  drukuje na ekranie 
  */
 
 
@@ -10,19 +10,11 @@ using namespace std;
 
 int main(int argc, char **argv)
 {
-    int i;
-    int j;
-    for (i = 0; i < 101; i++)
-    {
-        cout << "*";
-        if (i % 10 == 0 )
-        {
-            for (j=0; j<9; j++)
-                cout << "*";
-            cout << endl;
-        }
-    }
-    
+    int suma =0 ;
+    for ( int i=10 ; i<=20 ; i++ ) suma = suma +i ;
+        cout << suma ;
+   
+   
     return 0;
 }
 
