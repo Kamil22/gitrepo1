@@ -38,17 +38,6 @@ int main(int argc, char **argv)
         if (a > c) cout << "Największe jest a!";
         else cout << "Największe jest c!";
     }
-         
-    {
-    else
-    {
-        ; // a nie jest większe od b
-    }
- 
-    
-     
-
-
-    
+   
     return 0; 
 }
