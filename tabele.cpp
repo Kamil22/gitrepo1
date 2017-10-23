@@ -27,9 +27,15 @@ void sumuj (int tab[], int ile) {
     cout << "Suma liczb: " << suma << endl;
 }
 
-void najmniejsza(int tab[], int ile) {
-    ; // funkcja znajduje i drukuje najmniejszą 
-     // liczbę z tabeli
+void najmniejsza(int tab[], int min) {
+    ; 
+     int i = 0;
+     for (i = 0 ; i < min; i++) {
+         if (min > tab[i])
+         min = tab[i];
+     }
+     cout<<"Najmniejsza wczytana liczba: " << min << endl;
+ }
 
 int main(int argc, char **argv)
 {
