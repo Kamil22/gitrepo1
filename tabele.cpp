@@ -6,6 +6,20 @@
 #include <iostream>
 
 using namespace std;
+void ile5(int tab[], int ile)
+{
+    int i;
+    int licznik5 = 0;
+    int parzyste = 0;
+    for (i = 0; i < ile; i++) {
+        if (tab[i] % 5 == 0)
+        licznik5++;
+        if (tab[i] % 2 == 0)
+        parzyste++;
+    } 
+    cout << "Podzielnych przez 5: " << licznik5 << endl;
+    cout << "Parzystych: " << parzyste << endl;
+}
 
 void pobierzLiczby(int tab[], int ile) {
     int i = 0;
@@ -14,27 +28,17 @@ void pobierzLiczby(int tab[], int ile) {
         cin >> tab[i];
         }
     }
-    
-void sumuj (int tab[], int ile) {
-    int i = 0;
-    int suma = 0;
-    for (i = 0; i < ile; i++) {
-        //cout << liczby[i] << " " ;
-        suma += tab[i];
-         
-        
-    }
-    cout << "Suma liczb: " << suma << endl;
-}
 
-void najmniejsza(int tab[], int min) {
-    ; 
+
+void najmniejsza(int tab[], int ile) {
+     int min = tab[0];
      int i = 0;
-     for (i = 0 ; i < min; i++) {
-         if (min > tab[i])
-         min = tab[i];
-     }
-     cout<<"Najmniejsza wczytana liczba: " << min << endl;
+    for (i = 1; i < ile; i++) {
+        if (min > tab[i])
+        min = tab[i];
+    }
+    cout << "Najmniejsza: " << min << endl;
+     
  }
 
 int main(int argc, char **argv)
@@ -48,7 +52,8 @@ int main(int argc, char **argv)
 
     
     pobierzLiczby(liczby, rozmiar);
-    sumuj(liczby, rozmiar);
+    najmniejsza(liczby,rozmiar);
+    ile5(liczby, rozmiar);
     
     
 	return 0;
