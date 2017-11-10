@@ -1,19 +1,24 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+#
+#  dlotek.py
+
 
 import random
 
-def losuj(ileliczb, maksliczb):
-    liczby = []  # pusta lista
 
-    ile = 0  # ilość unikalnych liczb
-    # for i in range (ileliczb):
+def losuj(ileliczb, maksliczb):
+    liczby = []  # zbiór pusty
+
+    ile = 0
+    # for i in range(ileliczb):
     while ile < ileliczb:
-        liczba = random. randint(0, maksliczb)
+        liczba = random.randint(0, maksliczb)
         if liczby.count(liczba) == 0:
             liczby.append(liczba)
             ile += 1
 
+<<<<<<< HEAD
     return liczby
 
 
@@ -30,12 +35,17 @@ def pobierz_typy(ileliczb):
 
     print(typy)
     return typy
+=======
+    print(liczby)
+    return liczby
+>>>>>>> 54082135989e4a9f24446447c1ac7a65e3a66028
 
 
 def main(args):
-    ileliczb = int(input('Ile liczb chcesz zgadywać?'))
-    maksliczb = int(input('Maksymalna losowana liczba: '))
+    ileliczb = int(input("Ile liczb chcesz zgadywać?"))
+    maksliczb = int(input("Maksymalna losowana liczba: "))
 
+<<<<<<< HEAD
     while ileliczb > maksliczb or ileliczb < 1:
         ileliczb = int(input("Ile liczb chcesz zgadnąć z %s liczb?" % maksliczb))
 
@@ -44,6 +54,21 @@ def main(args):
 
     trafione = set(liczby) & typy
     print ("Trafiłeś", len(trafione), 'liczby.')
+=======
+    liczby = losuj(ileliczb, maksliczb)
+
+    # pobieranie typów użytkownika
+    typy = set()  # pusty zbiór
+    # for i in range(ileliczb):
+    ile = 0
+    while ile < ileliczb:
+        typ = input("Podaj typ: ")
+        if typ not in typy:
+            typy.add(typ)
+            ile += 1
+
+    print(typy)
+>>>>>>> 54082135989e4a9f24446447c1ac7a65e3a66028
 
     return 0
 
