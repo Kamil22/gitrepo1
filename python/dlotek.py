@@ -18,7 +18,7 @@ def losuj(ileliczb, maksliczb):
             liczby.append(liczba)
             ile += 1
 
-<<<<<<< HEAD
+
     return liczby
 
 
@@ -35,17 +35,17 @@ def pobierz_typy(ileliczb):
 
     print(typy)
     return typy
-=======
+
     print(liczby)
     return liczby
->>>>>>> 54082135989e4a9f24446447c1ac7a65e3a66028
+
 
 
 def main(args):
     ileliczb = int(input("Ile liczb chcesz zgadywać?"))
     maksliczb = int(input("Maksymalna losowana liczba: "))
 
-<<<<<<< HEAD
+
     while ileliczb > maksliczb or ileliczb < 1:
         ileliczb = int(input("Ile liczb chcesz zgadnąć z %s liczb?" % maksliczb))
 
@@ -54,7 +54,7 @@ def main(args):
 
     trafione = set(liczby) & typy
     print ("Trafiłeś", len(trafione), 'liczby.')
-=======
+
     liczby = losuj(ileliczb, maksliczb)
 
     # pobieranie typów użytkownika
@@ -68,7 +68,7 @@ def main(args):
             ile += 1
 
     print(typy)
->>>>>>> 54082135989e4a9f24446447c1ac7a65e3a66028
+
 
     return 0
 
