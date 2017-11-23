@@ -1,5 +1,7 @@
+import random
+
 def losuj(ileliczb, maksliczb):
-    liczby = []  # zbiór pusty
+    liczby = []
 
     ile = 0
     # for i in range(ileliczb):
@@ -9,11 +11,19 @@ def losuj(ileliczb, maksliczb):
             liczby.append(liczba)
             ile += 1
 
+    #  print(liczby)
     return liczby
-
-
+    
+    
+def minimum(lista):
+    min = lista[0]
+    for i, el in enumerate(lista):
+        print(i, el)
+    return 0
+    
 def main(args):
-    lista = losuj(20, 50)
+    lista = losuj (20, 50)
+    print ("Min:", minimum(lista))
     print (lista)
     return 0
 
