@@ -21,7 +21,7 @@ def fib_iter2(n):
     print(b)
     for i in range(2, n):
         a, b = b, a + b
-
+        print()
 
 
 def main(args):
@@ -30,7 +30,7 @@ def main(args):
     #  assert fib_iter(1) == 1
     #  assert fib_iter(2) == 1
     #  assert fib_iter(5) == 5
-    print("Wyraz {:d} = {:d}".format(10, fib_iter(10)))
+    print("Wyraz {:d} = {:d}".format(20, fib_iter(20)))
     return 0
 
 
