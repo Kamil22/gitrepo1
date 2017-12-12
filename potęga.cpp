@@ -10,30 +10,33 @@
 
 using namespace std;
 
-float potega_it(float x, int n) {
-    
+float potega_it(float x, int n)
+{
     float wynik = 1;
-    for(int i = n ; n*n ; ) {
-        // testuje ilość powtórzeń pętli
-        cout << i << endl;
-        
+    for (int i = 1; i <= n; i++)
+    {
+        wynik = wynik * x;
     }
     return wynik;
 }
 
-int main(int argc, char **argv)
-{
-	//pobierz od użytkownika podstawę i wykładnik
-    int a = 0;
-    int b = 0;
-    cout << "Podaj podstawę: " << a << endl;
-    cin >> a;
-    cout << "Podaj wykładnik: " << b << endl;
-    cin >> b;
-    int x=0;
-    int n=0;
-     
-    cout << "Potęga:" << potęga_it(x, n) <<endl;
-	return 0;
+int potega_rek(int x, int n)
+{    
+    if (x == 0)
+        return 0;
+    else if (n == 0)
+        return 1;
+    return potega_rek(x, n - 1) * x;
 }
 
+int main(int argc, char **argv)
+{
+    int n;
+    float x;
+    cout << "Podaj podstawe potęgi: " << endl;
+    cin >> x;
+    cout << "Podaj wykładnik potęgi: " << endl;
+    cin >> n;
+    cout << "Potęga: " << potega_rek(x, n) <<endl;
+	return 0;
+}
