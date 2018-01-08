@@ -13,7 +13,16 @@ def sort_przez_wstaw(lista):
             k -= 1
         lista [k + 1] = el
     return lista
-        
+
+def sort_przez_wstaw_bin(lista):
+     for i in range(1, len(lista)):
+        el = lista[i]
+        k = i - 1
+        while k >= 0 and lista[k] > el:
+            lista[k+1] = lista[k]
+            k -= 1
+        lista [k + 1] = el
+    return lista
 
 def main(args):
     lista = [4, 3, 7, 0, 3, 4, 1, 9]
